@@ -18,26 +18,26 @@ import {
   mdiAccountCreditCard,
   mdiCloudLock,
 } from "@mdi/js";
-import SectionMain from "@/components/SectionMain.vue";
-import CardBox from "@/components/CardBox.vue";
-import BaseDivider from "@/components/BaseDivider.vue";
-import FormField from "@/components/FormField.vue";
-import FormControl from "@/components/FormControl.vue";
-import FormFilePicker from "@/components/FormFilePicker.vue";
-import BaseButton from "@/components/BaseButton.vue";
-import BaseButtons from "@/components/BaseButtons.vue";
-import LayoutAuthenticated from "@/layouts/LayoutAuthenticated.vue";
-import SectionTitleLineWithButton from "@/components/SectionTitleLineWithButton.vue";
-import UserAvatarCurrentUserWithUpload from "@/components/Premium/UserAvatarCurrentUserWithUpload.vue";
-import PillTag from "@/components/PillTag.vue";
-import PillTagPlain from "@/components/PillTagPlain.vue";
-import BaseIcon from "@/components/BaseIcon.vue";
-import UserCardProfileNumber from "@/components/Premium/UserCardProfileNumber.vue";
-import SectionBannerProfile from "@/components/Premium/SectionBannerProfile.vue";
-import NotificationBar from "@/components/NotificationBar.vue";
-import CardBoxBillingItem from "@/components/Premium/CardBoxBillingItem.vue";
-import CardBoxPaymentMethod from "@/components/Premium/CardBoxPaymentMethod.vue";
-import FormCheckRadio from "@/components/FormCheckRadio.vue";
+// import SectionMain from "@/components/SectionMain.vue";
+// import CardBox from "@/components/CardBox.vue";
+// import BaseDivider from "@/components/BaseDivider.vue";
+// import FormField from "@/components/FormField.vue";
+// import FormControl from "@/components/FormControl.vue";
+// import FormFilePicker from "@/components/FormFilePicker.vue";
+// import BaseButton from "@/components/BaseButton.vue";
+// import BaseButtons from "@/components/BaseButtons.vue";
+// import SectionTitleLineWithButton from "@/components/SectionTitleLineWithButton.vue";
+// import UserAvatarCurrentUserWithUpload from "@/components/Premium/UserAvatarCurrentUserWithUpload.vue";
+// import PillTag from "@/components/PillTag.vue";
+// import PillTagPlain from "@/components/PillTagPlain.vue";
+// import BaseIcon from "@/components/BaseIcon.vue";
+// import FormCheckRadio from "@/components/FormCheckRadio.vue";
+// import NotificationBar from "@/components/NotificationBar.vue";
+
+// import CardBoxBillingItem from "@/components/Premium/CardBoxBillingItem.vue";
+// import CardBoxPaymentMethod from "@/components/Premium/CardBoxPaymentMethod.vue";
+// import UserCardProfileNumber from "@/components/Premium/UserCardProfileNumber.vue";
+// import SectionBannerProfile from "@/components/Premium/SectionBannerProfile.vue";
 
 const mainStore = useMainStore();
 
@@ -132,7 +132,8 @@ const twoFactorEnabled = ref(true);
 </script>
 
 <template>
-  <LayoutAuthenticated>
+  <div>
+  <NuxtLayout name="zen">
     <SectionMain>
       <SectionTitleLineWithButton :icon="mdiAccount" title="Profile" main>
         <BaseButton
@@ -177,17 +178,17 @@ const twoFactorEnabled = ref(true);
                 <PillTagPlain label="Emelyside" :icon="mdiMapMarker" />
               </BaseButtons>
               <BaseButtons class="mt-6" class-addon="mr-9 last:mr-0 mb-3">
-                <UserCardProfileNumber :number="499" label="Likes" />
-                <UserCardProfileNumber :number="128" label="Posts" />
-                <UserCardProfileNumber :number="256" label="Media" />
-                <UserCardProfileNumber :number="384" label="Links" />
-                <UserCardProfileNumber :number="512" label="Files" />
+                <PremUserCardProfileNumber :number="499" label="Likes" />
+                <PremUserCardProfileNumber :number="128" label="Posts" />
+                <PremUserCardProfileNumber :number="256" label="Media" />
+                <PremUserCardProfileNumber :number="384" label="Links" />
+                <PremUserCardProfileNumber :number="512" label="Files" />
               </BaseButtons>
             </div>
           </div>
         </CardBox>
 
-        <SectionBannerProfile />
+        <PremSectionBannerProfile />
       </div>
 
       <SectionTitleLineWithButton
@@ -220,7 +221,7 @@ const twoFactorEnabled = ref(true);
         </div>
       </CardBox>
 
-      <CardBoxBillingItem
+      <PremCardBoxBillingItem
         v-for="billingHistoryItem in billingHistory"
         :key="billingHistoryItem.id"
         :amount="billingHistoryItem.amount"
@@ -231,7 +232,7 @@ const twoFactorEnabled = ref(true);
         <BaseButton label="Add card" color="info" :icon="mdiPlusCircle" small />
       </SectionTitleLineWithButton>
 
-      <CardBoxPaymentMethod
+      <PremCardBoxPaymentMethod
         v-for="paymentMethod in paymentMethods"
         :key="paymentMethod.id"
         :card-type="paymentMethod.cardType"
@@ -384,5 +385,6 @@ const twoFactorEnabled = ref(true);
         </CardBox>
       </div>
     </SectionMain>
-  </LayoutAuthenticated>
+  </NuxtLayout>
+</div>
 </template>

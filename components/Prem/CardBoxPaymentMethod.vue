@@ -1,11 +1,11 @@
 <script setup>
 import { mdiTrashCan, mdiCreditCardEdit, mdiCreditCardCheck } from "@mdi/js";
-import { computed } from "vue";
-import CardBox from "../CardBox.vue";
-import BaseButtons from "../BaseButtons.vue";
-import BaseButton from "../BaseButton.vue";
-import PillTag from "../PillTag.vue";
-import CreditCardLogo from "./CreditCardLogo.vue";
+// import { computed } from "vue";
+// import CardBox from "@/components/CardBox.vue";
+// import BaseButtons from "@/components/BaseButtons.vue";
+// import BaseButton from "@/components/BaseButton.vue";
+// import PillTag from "@/components/PillTag.vue";
+// import CreditCardLogo from "@/prem/CreditCardLogo.vue";
 
 const props = defineProps({
   cardType: {
@@ -40,7 +40,7 @@ const cardTypeName = computed(() => cardTypeNames[props.cardType]);
   <CardBox class="mb-6">
     <div class="md:flex md:justify-between md:items-center">
       <div class="flex justify-start items-center mb-6 md:mb-0">
-        <CreditCardLogo class="mr-6" :card-type="cardType" />
+        <PremCreditCardLogo class="mr-6" :card-type="cardType" />
         <div class="mr-6">
           <h2 class="text-xl font-semibold">
             {{ cardTypeName }} {{ cardNumber }}

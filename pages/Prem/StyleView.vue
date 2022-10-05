@@ -1,12 +1,13 @@
 <script setup>
-import { mdiThemeLightDark } from "@mdi/js";
-import CardBox from "@/components/CardBox.vue";
-import SectionTitle from "@/components/SectionTitle.vue";
-import SectionMain from "@/components/SectionMain.vue";
-import BaseButton from "@/components/BaseButton.vue";
-import BaseButtons from "@/components/BaseButtons.vue";
-import { useStyleStore } from "@/stores/style.js";
-import LayoutAuthenticated from "@/layouts/LayoutAuthenticated.vue";
+  import { useStyleStore } from "@/stores/style.js";
+  import { mdiThemeLightDark } from "@mdi/js";
+
+// import CardBox from "@/components/CardBox.vue";
+// import SectionTitle from "@/components/SectionTitle.vue";
+// import SectionMain from "@/components/SectionMain.vue";
+// import BaseButton from "@/components/BaseButton.vue";
+// import BaseButtons from "@/components/BaseButtons.vue";
+
 
 const styleStore = useStyleStore();
 
@@ -41,7 +42,8 @@ const darkModeToggle = () => {
 </script>
 
 <template>
-  <LayoutAuthenticated>
+  <div>
+  <NuxtLayout name="zen">
     <SectionTitle> Sidebar Colors </SectionTitle>
 
     <SectionMain>
@@ -78,5 +80,6 @@ const darkModeToggle = () => {
         </div>
       </CardBox>
     </SectionMain>
-  </LayoutAuthenticated>
+  </NuxtLayout>
+</div>
 </template>
