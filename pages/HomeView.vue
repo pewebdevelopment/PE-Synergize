@@ -20,9 +20,10 @@ import NotificationBar from "@/components/NotificationBar.vue";
 import BaseButton from "@/components/BaseButton.vue";
 import CardBoxTransaction from "@/components/CardBoxTransaction.vue";
 import CardBoxClient from "@/components/CardBoxClient.vue";
-import LayoutAuthenticated from "@/layouts/LayoutAuthenticated.vue";
+
 import SectionTitleLineWithButton from "@/components/SectionTitleLineWithButton.vue";
 import SectionBannerStarOnGitHub from "@/components/SectionBannerStarOnGitHub.vue";
+
 
 const chartData = ref(null);
 
@@ -42,7 +43,8 @@ const transactionBarItems = computed(() => mainStore.history);
 </script>
 
 <template>
-  <LayoutAuthenticated>
+  <div>
+  <NuxtLayout name = "zen">
     <SectionMain>
       <SectionTitleLineWithButton
         :icon="mdiChartTimelineVariant"
@@ -140,5 +142,6 @@ const transactionBarItems = computed(() => mainStore.history);
         <TableSampleClients />
       </CardBox>
     </SectionMain>
-  </LayoutAuthenticated>
+  </NuxtLayout>
+</div>
 </template>

@@ -9,7 +9,7 @@ import FormField from "@/components/FormField.vue";
 import FormControl from "@/components/FormControl.vue";
 import BaseButton from "@/components/BaseButton.vue";
 import BaseButtons from "@/components/BaseButtons.vue";
-import LayoutGuest from "@/layouts/LayoutGuest.vue";
+
 
 const form = reactive({
   login: "john.doe",
@@ -25,7 +25,8 @@ const submit = () => {
 </script>
 
 <template>
-  <LayoutGuest>
+  <div>
+  <NuxtLayout name = "zen">
     <SectionFullScreen v-slot="{ cardClass }" bg="purplePink">
       <CardBox :class="cardClass" is-form @submit.prevent="submit">
         <FormField label="Login" help="Please enter your login">
@@ -62,5 +63,6 @@ const submit = () => {
         </template>
       </CardBox>
     </SectionFullScreen>
-  </LayoutGuest>
+  </NuxtLayout>
+</div>
 </template>

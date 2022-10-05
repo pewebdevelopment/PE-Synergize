@@ -1,11 +1,12 @@
 <script setup>
 import SectionTitle from "@/components/SectionTitle.vue";
 import SectionMain from "@/components/SectionMain.vue";
-import LayoutAuthenticated from "@/layouts/LayoutAuthenticated.vue";
+
 </script>
 
 <template>
-  <LayoutAuthenticated>
+  <div>
+  <NuxtLayout name = "zen">
     <SectionTitle first>Mobile & Tablet</SectionTitle>
 
     <SectionMain>
@@ -55,5 +56,6 @@ import LayoutAuthenticated from "@/layouts/LayoutAuthenticated.vue";
         />
       </div>
     </SectionMain>
-  </LayoutAuthenticated>
+  </NuxtLayout>
+</div>
 </template>

@@ -7,7 +7,8 @@ import BaseButtons from "@/components/BaseButtons.vue";
 </script>
 
 <template>
-  <LayoutGuest>
+  <div>
+  <NuxtLayout>
     <SectionFullScreen v-slot="{ cardClass }" bg="pinkRed">
       <CardBox :class="cardClass">
         <div class="space-y-3">
@@ -23,5 +24,6 @@ import BaseButtons from "@/components/BaseButtons.vue";
         </template>
       </CardBox>
     </SectionFullScreen>
-  </LayoutGuest>
+  </NuxtLayout>
+</div>
 </template>

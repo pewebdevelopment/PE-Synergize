@@ -17,7 +17,7 @@ import FormFilePicker from "@/components/FormFilePicker.vue";
 import BaseButton from "@/components/BaseButton.vue";
 import BaseButtons from "@/components/BaseButtons.vue";
 import UserCard from "@/components/UserCard.vue";
-import LayoutAuthenticated from "@/layouts/LayoutAuthenticated.vue";
+
 import SectionTitleLineWithButton from "@/components/SectionTitleLineWithButton.vue";
 
 const mainStore = useMainStore();
@@ -43,7 +43,8 @@ const submitPass = () => {
 </script>
 
 <template>
-  <LayoutAuthenticated>
+  <div>
+  <NuxtLayout name = "zen">
     <SectionMain>
       <SectionTitleLineWithButton :icon="mdiAccount" title="Profile" main>
         <BaseButton
@@ -143,5 +144,6 @@ const submitPass = () => {
         </CardBox>
       </div>
     </SectionMain>
-  </LayoutAuthenticated>
+  </NuxtLayout>
+</div>
 </template>

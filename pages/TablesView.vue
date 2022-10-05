@@ -9,14 +9,15 @@ import SectionMain from "@/components/SectionMain.vue";
 import NotificationBar from "@/components/NotificationBar.vue";
 import TableSampleClients from "@/components/TableSampleClients.vue";
 import CardBox from "@/components/CardBox.vue";
-import LayoutAuthenticated from "@/layouts/LayoutAuthenticated.vue";
+
 import SectionTitleLineWithButton from "@/components/SectionTitleLineWithButton.vue";
 import BaseButton from "@/components/BaseButton.vue";
 import CardBoxComponentEmpty from "@/components/CardBoxComponentEmpty.vue";
 </script>
 
 <template>
-  <LayoutAuthenticated>
+  <div>
+  <NuxtLayout name = "zen">
     <SectionMain>
       <SectionTitleLineWithButton :icon="mdiTableBorder" title="Tables" main>
         <BaseButton
@@ -47,5 +48,6 @@ import CardBoxComponentEmpty from "@/components/CardBoxComponentEmpty.vue";
         <CardBoxComponentEmpty />
       </CardBox>
     </SectionMain>
-  </LayoutAuthenticated>
+  </NuxtLayout>
+  </div>
 </template>

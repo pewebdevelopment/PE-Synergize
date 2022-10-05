@@ -22,7 +22,7 @@ import CardBoxModal from "@/components/CardBoxModal.vue";
 import SectionTitle from "@/components/SectionTitle.vue";
 import FormField from "@/components/FormField.vue";
 import FormCheckRadioGroup from "@/components/FormCheckRadioGroup.vue";
-import LayoutAuthenticated from "@/layouts/LayoutAuthenticated.vue";
+
 import SectionTitleLineWithButton from "@/components/SectionTitleLineWithButton.vue";
 import CardBoxComponentEmpty from "@/components/CardBoxComponentEmpty.vue";
 import CardBoxComponentTitle from "@/components/CardBoxComponentTitle.vue";
@@ -76,7 +76,8 @@ const styleStore = useStyleStore();
 </script>
 
 <template>
-  <LayoutAuthenticated>
+  <div>
+  <NuxtLayout name = "zen">
     <CardBoxModal
       v-model="modalOneActive"
       title="Please confirm action"
@@ -548,5 +549,6 @@ const styleStore = useStyleStore();
         <CardBoxComponentEmpty />
       </CardBox>
     </SectionMain>
-  </LayoutAuthenticated>
+  </NuxtLayout>
+</div>
 </template>
