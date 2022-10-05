@@ -3,13 +3,13 @@ import { reactive } from "vue";
 import { RouterLink } from "vue-router";
 import { useMainStore } from "@/stores/main.js";
 import { mdiAccount } from "@mdi/js";
-import SectionFormScreen from "@/components/Premium/SectionFormScreen.vue";
-import CardBox from "@/components/CardBox.vue";
-import FormField from "@/components/FormField.vue";
-import FormControl from "@/components/FormControl.vue";
-import BaseButton from "@/components/BaseButton.vue";
-import BaseLevel from "@/components/BaseLevel.vue";
-import LayoutGuest from "@/layouts/LayoutGuest.vue";
+// import CardBox from "@/components/CardBox.vue";
+// import FormField from "@/components/FormField.vue";
+// import FormControl from "@/components/FormControl.vue";
+// import BaseButton from "@/components/BaseButton.vue";
+// import BaseLevel from "@/components/BaseLevel.vue";
+
+// import SectionFormScreen from "@/components/Premium/SectionFormScreen.vue";
 
 const form = reactive({
   login: "johndoe",
@@ -23,8 +23,9 @@ const submit = () => {
 </script>
 
 <template>
-  <LayoutGuest>
-    <SectionFormScreen v-slot="{ cardClass }" bg="redYellow">
+  <div>
+  <NuxtLayout>
+    <PremSectionFormScreen v-slot="{ cardClass }" bg="redYellow">
       <CardBox :class="cardClass" is-form @submit.prevent="submit">
         <FormField label="Username" help="Please enter your username">
           <FormControl
@@ -43,6 +44,8 @@ const submit = () => {
           </BaseLevel>
         </template>
       </CardBox>
-    </SectionFormScreen>
-  </LayoutGuest>
+    </PremSectionFormScreen>
+  </NuxtLayout>
+
+</div>
 </template>

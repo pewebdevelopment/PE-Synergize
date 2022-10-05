@@ -19,21 +19,21 @@ import {
   mdiCreditCardOutline,
 } from "@mdi/js";
 import * as chartConfig from "@/components/Charts/chart.config.js";
-import LineChart from "@/components/Charts/LineChart.vue";
-import SectionMain from "@/components/SectionMain.vue";
-import SectionTitleLineWithButton from "@/components/SectionTitleLineWithButton.vue";
-import CardBoxWidget from "@/components/CardBoxWidget.vue";
-import CardBox from "@/components/CardBox.vue";
-import TableSampleClients from "@/components/TableSampleClients.vue";
-import NotificationBar from "@/components/NotificationBar.vue";
-import CardBoxClient from "@/components/CardBoxClient.vue";
-import CardBoxTransaction from "@/components/CardBoxTransaction.vue";
-import CardBoxProduct from "@/components/Premium/CardBoxProduct.vue";
-import CardBoxAmountItem from "@/components/Premium/CardBoxAmountItem.vue";
-import BaseButtons from "@/components/BaseButtons.vue";
-import BaseButton from "@/components/BaseButton.vue";
-import UserCard from "@/components/Premium/UserCard.vue";
-import LayoutAuthenticated from "@/layouts/LayoutAuthenticated.vue";
+// import LineChart from "@/components/Charts/LineChart.vue";
+// import SectionMain from "@/components/SectionMain.vue";
+// import SectionTitleLineWithButton from "@/components/SectionTitleLineWithButton.vue";
+// import CardBoxWidget from "@/components/CardBoxWidget.vue";
+// import CardBox from "@/components/CardBox.vue";
+// import TableSampleClients from "@/components/TableSampleClients.vue";
+// import NotificationBar from "@/components/NotificationBar.vue";
+// import CardBoxClient from "@/components/CardBoxClient.vue";
+// import CardBoxTransaction from "@/components/CardBoxTransaction.vue";
+// import BaseButtons from "@/components/BaseButtons.vue";
+// import BaseButton from "@/components/BaseButton.vue";
+
+// import UserCard from "@/components/Premium/UserCard.vue";
+// import CardBoxProduct from "@/components/Premium/CardBoxProduct.vue";
+// import CardBoxAmountItem from "@/components/Premium/CardBoxAmountItem.vue";
 
 const mainStore = useMainStore();
 
@@ -87,7 +87,8 @@ const productBarItems = computed(() => mainStore.products);
 </script>
 
 <template>
-  <LayoutAuthenticated>
+  <div>
+  <NuxtLayout name="zen">
     <SectionMain>
       <SectionTitleLineWithButton
         :icon="mdiChartTimelineVariant"
@@ -149,7 +150,7 @@ const productBarItems = computed(() => mainStore.products);
       </div>
 
       <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-6">
-        <UserCard />
+        <PremUserCard />
         <div class="flex flex-col">
           <CardBoxClient
             v-for="client in clientBarItems"
@@ -181,21 +182,21 @@ const productBarItems = computed(() => mainStore.products);
           />
         </div>
         <CardBox>
-          <CardBoxAmountItem
+          <PremCardBoxAmountItem
             title="Unpaid balance"
             value="$120,489.67"
             :icon="mdiBriefcaseVariant"
             icon-type="info"
             divider
           />
-          <CardBoxAmountItem
+          <PremCardBoxAmountItem
             title="Pending transactions"
             value="$756.49"
             :icon="mdiCalendarToday"
             icon-type="warning"
             divider
           />
-          <CardBoxAmountItem
+          <PremCardBoxAmountItem
             title="Pending withdrawals"
             value="$50,124.28"
             :icon="mdiCameraSwitch"
@@ -224,21 +225,21 @@ const productBarItems = computed(() => mainStore.products);
             <LineChart :data="chartData" />
           </div>
           <div class="text-center md:text-right">
-            <CardBoxAmountItem
+            <PremCardBoxAmountItem
               title="Checking Account"
               value="$33,908.37"
               trend="12%"
               trend-type="up"
               divider
             />
-            <CardBoxAmountItem
+            <PremCardBoxAmountItem
               title="Auto Loan Account"
               value="$1,456.49"
               trend="Balance low"
               trend-type="alert"
               divider
             />
-            <CardBoxAmountItem
+            <PremCardBoxAmountItem
               title="Home Loan Account"
               value="$98,726.20"
               trend="24%"
@@ -250,11 +251,11 @@ const productBarItems = computed(() => mainStore.products);
 
       <SectionTitleLineWithButton :icon="mdiChartPie" title="Products" />
 
-      <CardBoxProduct
+      <!-- <PremCardBoxProduct
         v-for="product in productBarItems"
         :key="product.id"
         :product="product"
-      />
+      /> -->
 
       <SectionTitleLineWithButton :icon="mdiAccountMultiple" title="Clients" />
 
@@ -266,5 +267,6 @@ const productBarItems = computed(() => mainStore.products);
         <TableSampleClients />
       </CardBox>
     </SectionMain>
-  </LayoutAuthenticated>
+  </NuxtLayout>
+</div>
 </template>
