@@ -110,7 +110,7 @@ const componentClass = computed(() => {
 
 <template>
   <div>
-  <!-- <component
+  <component
     :is="is"
     :class="componentClass"
     :href="href"
@@ -123,7 +123,7 @@ const componentClass = computed(() => {
     <span v-if="label" :class="labelClass">{{ label }}</span>
    
   </component> 
-    -->
+   
 
     
 </div>
