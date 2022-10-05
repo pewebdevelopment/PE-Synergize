@@ -50,11 +50,11 @@ defineProps({
           <PillTag color="warning" :label="product.product" small />
         </BaseButtons>
         <h4 class="text-xl md:mx-6">${{ product.price }}</h4>
-        <!-- <PremButtonMenu
+        <PremButtonMenu
           :options="buttonMenuOptions"
           :icon="mdiDotsVertical"
           small
-        /> -->
+        />
       </BaseLevel>
     </BaseLevel>
   </CardBox>
