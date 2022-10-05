@@ -2,16 +2,17 @@
 import { reactive, ref, computed } from "vue";
 import { RouterLink } from "vue-router";
 import { mdiAccount, mdiHome } from "@mdi/js";
-import SectionFormScreen from "@/components/Premium/SectionFormScreen.vue";
-import CardBox from "@/components/CardBox.vue";
-import FormCheckRadioPicker from "@/components/FormCheckRadioGroup.vue";
-import FormField from "@/components/FormField.vue";
-import FormControl from "@/components/FormControl.vue";
-import BaseButton from "@/components/BaseButton.vue";
-import BaseLevel from "@/components/BaseLevel.vue";
-import BaseButtons from "@/components/BaseButtons.vue";
-import ButtonTextLink from "@/components/Premium/ButtonTextLink.vue";
-import LayoutGuest from "@/layouts/LayoutGuest.vue";
+
+// import CardBox from "@/components/CardBox.vue";
+// import FormCheckRadioPicker from "@/components/FormCheckRadioGroup.vue";
+// import FormField from "@/components/FormField.vue";
+// import FormControl from "@/components/FormControl.vue";
+// import BaseButton from "@/components/BaseButton.vue";
+// import BaseLevel from "@/components/BaseLevel.vue";
+// import BaseButtons from "@/components/BaseButtons.vue";
+
+// import ButtonTextLink from "@/components/Premium/ButtonTextLink.vue";
+// import SectionFormScreen from "@/components/Premium/SectionFormScreen.vue";
 
 const form = reactive({
   login: "johndoe",
@@ -43,8 +44,9 @@ const passShowHideClicked = ref(true);
 </script>
 
 <template>
-  <LayoutGuest>
-    <SectionFormScreen v-slot="{ cardClass }" bg="purplePink" has-promo>
+  <div>
+  <NuxtLayout>
+    <PremSectionFormScreen v-slot="{ cardClass }" bg="purplePink" has-promo>
       <CardBox
         :class="[cardClass, cardClassAddon]"
         is-form
@@ -105,10 +107,11 @@ const passShowHideClicked = ref(true);
               />
               <BaseButton label="Sign up" to="/signup" color="info" outline />
             </BaseButtons>
-            <ButtonTextLink to="/" :icon="mdiHome" label="Home" small />
+            <PremButtonTextLink to="/" :icon="mdiHome" label="Home" small />
           </BaseLevel>
         </template>
       </CardBox>
-    </SectionFormScreen>
-  </LayoutGuest>
+    </PremSectionFormScreen>
+  </NuxtLayout>
+</div>
 </template>

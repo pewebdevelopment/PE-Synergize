@@ -6,8 +6,8 @@ import {
   gradientBgPurplePink,
   gradientBgDark,
   gradientBgPinkRed,
-} from "@/colors.js";
-import { gradientBgYellowRed, gradientBgRedYellow } from "@/colorsPremium.js";
+} from "@/configs/colors.js";
+import { gradientBgYellowRed, gradientBgRedYellow } from "@/configs/colorsPremium.js";
 import JustboilLogo from "@/components/JustboilLogo.vue";
 import BaseButtons from "@/components/BaseButtons.vue";
 import BaseButton from "@/components/BaseButton.vue";
@@ -60,7 +60,7 @@ const routes = {
   >
     <div v-if="hasPromo" class="space-y-12 px-12">
       <div class="hidden lg:block">
-        <BaseButtons type="justify-center" glue>
+        <Basebuttons type="justify-center" glue>
           <BaseButton
             v-for="(routeLabel, index) in routes"
             :key="index"
@@ -70,7 +70,7 @@ const routes = {
             :label="routeLabel"
             color="whiteDark"
           />
-        </BaseButtons>
+        </Basebuttons>
       </div>
 
       <div class="text-center text-white py-12 md:py-0">
@@ -80,14 +80,14 @@ const routes = {
       <div
         class="hidden md:block py-12 md:py-0 text-center text-white text-opacity-50 dark:text-opacity-80"
       >
-        <RouterLink to="/"> Instagram </RouterLink> |
-        <RouterLink to="/"> Telegram </RouterLink> |
-        <RouterLink to="/"> Teletype </RouterLink>
+        <NuxtLink to="/"> Instagram </NuxtLink> |
+        <NuxtLink to="/"> Telegram </NuxtLink> |
+        <NuxtLink to="/"> Teletype </NuxtLink>
       </div>
       <div class="hidden md:block text-white">
-        <RouterLink to="/">
+        <NuxtLink to="/">
           <JustboilLogo class="w-auto h-12 mx-auto" />
-        </RouterLink>
+        </NuxtLink>
       </div>
     </div>
 
@@ -95,15 +95,17 @@ const routes = {
 
     <div v-if="hasPromo" class="md:hidden space-y-12 py-12">
       <div class="text-white text-opacity-50">
-        <RouterLink to="/"> Instagram </RouterLink> |
-        <RouterLink to="/"> Telegram </RouterLink> |
-        <RouterLink to="/"> Teletype </RouterLink>
+        <NuxtLink to="/"> Instagram </NuxtLink> |
+        <NuxtLink to="/"> Telegram </NuxtLink> |
+        <NuxtLink to="/"> Teletype </NuxtLink>
+
       </div>
       <div class="text-white">
-        <RouterLink to="/">
+        <NuxtLink to="/">
           <JustboilLogo class="w-auto h-8 mx-auto" />
-        </RouterLink>
-      </div>
+        </NuxtLink>
+      </div> 
     </div>
+    
   </section>
 </template>
