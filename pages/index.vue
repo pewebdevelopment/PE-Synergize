@@ -15,9 +15,8 @@ router.push("/dashboard");
 </script>
 
 <template>
+  <div>
   <NuxtLayout>
-
-   
 
     <SectionFullScreen v-slot="{ cardClass }" bg="purplePink">
       <CardBox :class="cardClass" is-form @submit.prevent="submit">
@@ -63,4 +62,6 @@ router.push("/dashboard");
 
 
   </NuxtLayout>
+
+</div>
 </template>
