@@ -39,14 +39,14 @@ const computedValue = computed({
   <div>
 <Listbox v-slot="{ }" v-model="computedValue">
     <div class="relative">
-      <!-- <ListboxButton
+      <ListboxButton
         :class="[buttonClass, open ? 'ring' : '']"
         class="text-left ring-blue-700"
       >
         <span class="truncate">{{
           computedValue ? computedValue.label : "Select"
         }}</span>
-      </ListboxButton> -->
+      </ListboxButton>
 
       <transition
         leave-active-class="transition duration-100 ease-in"
