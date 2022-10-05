@@ -1,49 +1,64 @@
 import {
   mdiAccountCircle,
   mdiMonitor,
-  mdiGithub,
+  mdiHelpCircle,
   mdiLock,
-  mdiAlertCircle,
   mdiSquareEditOutline,
   mdiTable,
-  mdiViewList,
+  mdiMenuOpen,
   mdiTelevisionGuide,
-  mdiResponsive,
+  mdiBarcode,
   mdiPalette,
-  mdiReact,
+  mdiCardAccountDetailsOutline,
+  mdiOpenInNew,
+  mdiFormDropdown,
+  mdiBallot,
+  mdiViewQuilt,
 } from "@mdi/js";
 
 export default [
   {
-    to: "/dashboard",
+    to: "/",
     icon: mdiMonitor,
     label: "Dashboard",
   },
   {
-    to: "/tables",
-    label: "Tables",
+    to: "/tables-and-lists",
+    label: "Tables & Lists",
     icon: mdiTable,
+    updateMark: "warning",
   },
   {
     to: "/forms",
-    label: "Forms",
+    label: "Forms Base",
     icon: mdiSquareEditOutline,
   },
   {
+    to: "/forms-advanced",
+    label: "Forms Advanced",
+    icon: mdiBallot,
+  },
+  {
     to: "/ui",
-    label: "UI",
+    label: "UI Base",
     icon: mdiTelevisionGuide,
   },
   {
-    to: "/responsive",
-    label: "Responsive",
-    icon: mdiResponsive,
+    to: "/ui-advanced",
+    label: "UI Advanced",
+    icon: mdiViewQuilt,
   },
   {
-    to: "/",
+    to: "/styles",
     label: "Styles",
     icon: mdiPalette,
   },
+  {
+    to: "/pricing",
+    label: "Pricing layout",
+    icon: mdiBarcode,
+  },
+
   {
     to: "/profile",
     label: "Profile",
@@ -55,32 +70,40 @@ export default [
     icon: mdiLock,
   },
   {
-    to: "/error",
-    label: "Error",
-    icon: mdiAlertCircle,
-  },
-  {
-    label: "Dropdown",
-    icon: mdiViewList,
-    menu: [
+    // Key should be unique for each submenus object
+    // It is required for open/close logic
+    key: "submenus-1",
+    label: "Sub",
+    icon: mdiMenuOpen,
+    menuSecondary: [
       {
-        label: "Item One",
+        to: "/profile",
+        label: "Sample RouterLink",
+        icon: mdiCardAccountDetailsOutline,
       },
       {
-        label: "Item Two",
+        label: "External link",
+        href: "https://justboil.me",
+        icon: mdiOpenInNew,
+        target: "_blank",
+      },
+      {
+        label: "Dropdown",
+        icon: mdiFormDropdown,
+        menu: [
+          {
+            label: "Dropdown item One",
+          },
+          {
+            label: "Dropdown item Two",
+          },
+        ],
       },
     ],
   },
   {
-    href: "https://github.com/justboil/admin-one-vue-tailwind",
-    label: "GitHub",
-    icon: mdiGithub,
-    target: "_blank",
-  },
-  {
-    href: "https://github.com/justboil/admin-one-react-tailwind",
-    label: "React version",
-    icon: mdiReact,
-    target: "_blank",
+    href: "https://justboil.me/tailwind-admin-templates/vue-dashboard/",
+    label: "About",
+    icon: mdiHelpCircle,
   },
 ];

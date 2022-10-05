@@ -8,8 +8,7 @@ import {
   mdiEmail,
   mdiLogout,
   mdiThemeLightDark,
-  mdiGithub,
-  mdiReact,
+  mdiHelpCircleOutline,
 } from "@mdi/js";
 
 export default [
@@ -67,18 +66,10 @@ export default [
     isToggleLightDark: true,
   },
   {
-    icon: mdiGithub,
-    label: "GitHub",
+    icon: mdiHelpCircleOutline,
+    label: "About",
+    href: "https://justboil.me/tailwind-admin-templates/vue-dashboard/",
     isDesktopNoLabel: true,
-    href: "https://github.com/justboil/admin-one-vue-tailwind",
-    target: "_blank",
-  },
-  {
-    icon: mdiReact,
-    label: "React version",
-    isDesktopNoLabel: true,
-    href: "https://github.com/justboil/admin-one-react-tailwind",
-    target: "_blank",
   },
   {
     icon: mdiLogout,
