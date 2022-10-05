@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { getButtonColor } from "@/colors.js";
+import { getButtonColor } from "@/configs/colors.js";
 
 const props = defineProps({
   lifetime: {
