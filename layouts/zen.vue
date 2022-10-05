@@ -77,8 +77,11 @@ const menuClick = (event, item) => {
 
         <slot />
 
-        <AsideMenu :is-aside-mobile-expanded="isAsideMobileExpanded" :is-aside-lg-active="isAsideLgActive"
-          :menu="menuAside" @menu-click="menuClick" @aside-lg-close-click="isAsideLgActive = false" />
+        <PremAsideMenu :menu="menuAside" @menu-click="menuClick" />
+
+        <!-- Following was the old AsideMenu  -->
+        <!-- <AsideMenu :is-aside-mobile-expanded="isAsideMobileExpanded" :is-aside-lg-active="isAsideLgActive"
+          :menu="menuAside" @menu-click="menuClick" @aside-lg-close-click="isAsideLgActive = false" /> -->
 
       </div>
 
