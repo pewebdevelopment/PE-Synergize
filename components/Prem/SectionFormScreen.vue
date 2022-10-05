@@ -69,7 +69,7 @@ const routes = {
             :active-soft="index === currentRouteName"
             :label="routeLabel"
             color="whiteDark"
-          />
+          /> 
         </Basebuttons>
       </div>
 
@@ -89,9 +89,9 @@ const routes = {
           <JustboilLogo class="w-auto h-12 mx-auto" />
         </NuxtLink>
       </div>
-    </div>
+    </div> 
 
-    <slot card-class="w-11/12 md:w-7/12 lg:w-5/12 xl:w-4/12 shadow-2xl" />
+<slot card-class="w-11/12 md:w-7/12 lg:w-5/12 xl:w-4/12 shadow-2xl" /> 
 
     <div v-if="hasPromo" class="md:hidden space-y-12 py-12">
       <div class="text-white text-opacity-50">
@@ -105,7 +105,7 @@ const routes = {
           <JustboilLogo class="w-auto h-8 mx-auto" />
         </NuxtLink>
       </div> 
-    </div>
+    </div> 
     
   </section>
 </template>
