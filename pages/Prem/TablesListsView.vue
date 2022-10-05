@@ -71,11 +71,11 @@ const productBarItems = computed(() => mainStore.products.slice(0, 3));
 
       <SectionTitleLineWithButton :icon="mdiPackageVariant" title="Products" />
 
-      <PremCardBoxProduct
+      <!-- <PremCardBoxProduct
         v-for="product in productBarItems"
         :key="product.id"
         :product="product"
-      />
+      /> -->
 
       <SectionTitleLineWithButton
         :icon="mdiMonitorCellphone"

@@ -1,5 +1,5 @@
 <script setup>
-import { buttonMenuOptions } from "@/sampleButtonMenuOptions.js";
+import { buttonMenuOptions } from "@/configs/sampleButtonMenuOptions.js";
 import { mdiDotsVertical } from "@mdi/js";
 // import CardBox from "@/components/CardBox.vue";
 // import BaseLevel from "@/components/BaseLevel.vue";
@@ -50,11 +50,11 @@ defineProps({
           <PillTag color="warning" :label="product.product" small />
         </BaseButtons>
         <h4 class="text-xl md:mx-6">${{ product.price }}</h4>
-        <PremButtonMenu
+        <!-- <PremButtonMenu
           :options="buttonMenuOptions"
           :icon="mdiDotsVertical"
           small
-        />
+        /> -->
       </BaseLevel>
     </BaseLevel>
   </CardBox>
