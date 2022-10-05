@@ -102,6 +102,9 @@ const formErrorSubmit = () => {
   <div>
   <NuxtLayout name = "zen">
     <SectionMain>
+    
+
+
       <SectionTitleLineWithButton
         :icon="mdiBallotOutline"
         title="Advanced forms example"
@@ -116,6 +119,8 @@ const formErrorSubmit = () => {
           small
         />
       </SectionTitleLineWithButton>
+
+<!-- 
 
       <div class="grid grid-cols-1 gap-6 mb-6 xl:grid-cols-4">
         <CardBox
@@ -409,14 +414,18 @@ const formErrorSubmit = () => {
           <PremFormField label="File">
             <FormFilePicker v-model="form.file" label="Upload" />
           </PremFormField>
-        </CardBox>
+        </CardBox> 
+      
       </div>
 
+   -->
       <SectionTitleLineWithButton
         :icon="mdiProgressCheck"
         title="Layout & state examples"
       />
 
+
+<!--       
       <CardBox>
         <PremFormField label="Fields">
           <PremFormControl
@@ -469,6 +478,8 @@ const formErrorSubmit = () => {
         </PremFormField>
       </CardBox>
 
+       -->
+
       <SectionTitle>Form with error example</SectionTitle>
 
       <CardBox
@@ -495,8 +506,15 @@ const formErrorSubmit = () => {
             :tip="formErrorHasError ? null : 'Click to trigger'"
           />
         </template>
-      </CardBox>
+      </CardBox>  
+
+
+
+
+
     </SectionMain>
+
+
   </NuxtLayout>
 </div>
 </template>
