@@ -23,7 +23,7 @@ const props = defineProps({
   small: Boolean,
 });
 
-const is = computed(() => (props.to ? NuxtLink : "a"));
+const is = computed(() => (props.to ? RouterLink : "a"));
 </script>
 
 <template>
