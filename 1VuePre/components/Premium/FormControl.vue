@@ -1,6 +1,6 @@
 <script setup>
-import { getButtonColor } from "@/colors.js";
-import { controlTextColor } from "@/colorsPremium.js";
+import { getButtonColor } from "@/configs/colors.js";
+import { controlTextColor } from "@/configs/colorsPremium.js";
 import { computed, ref, onMounted, onBeforeUnmount } from "vue";
 import { useMainStore } from "@/stores/main.js";
 import {
@@ -10,11 +10,11 @@ import {
   mdiAsterisk,
   mdiLockOff,
 } from "@mdi/js";
-import FormControlIcon from "@/components/Premium/FormControlIcon.vue";
-import FormFieldHelp from "@/components/Premium/FormFieldHelp.vue";
-import FormControlListbox from "@/components/Premium/FormControlListbox.vue";
-import BaseIcon from "@/components/BaseIcon.vue";
-import TipTag from "@/components/Premium/TipTag.vue";
+// import FormControlIcon from "@/components/Premium/FormControlIcon.vue";
+// import FormFieldHelp from "@/components/Premium/FormFieldHelp.vue";
+// import FormControlListbox from "@/components/Premium/FormControlListbox.vue";
+// import BaseIcon from "@/components/BaseIcon.vue";
+// import TipTag from "@/components/Premium/TipTag.vue";
 
 const props = defineProps({
   firstAddon: Boolean,
@@ -328,7 +328,7 @@ if (props.ctrlKFocus) {
       >
         {{ modelValue }}
       </div>
-      <FormControlListbox
+      <PremFormControlListbox
         v-else-if="computedType === 'list'"
         v-model="computedValue"
         :options="options"
@@ -388,7 +388,7 @@ if (props.ctrlKFocus) {
         :max="max"
         :class="inputElClass"
       />
-      <FormControlIcon
+      <PremFormControlIcon
         v-if="computedIconLeft"
         :icon="computedIconLeft"
         :h="controlIconH"
@@ -406,7 +406,7 @@ if (props.ctrlKFocus) {
       <TipTag v-if="tipLeft" :tip="tipLeft" left />
       <TipTag v-if="tipRight" :tip="tipRight" right />
     </div>
-    <FormFieldHelp
+    <PremFormFieldHelp
       :help="help"
       :error="error"
       :success="success"

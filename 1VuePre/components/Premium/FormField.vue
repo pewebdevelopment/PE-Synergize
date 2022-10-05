@@ -1,7 +1,7 @@
 <script setup>
-import { controlTextColor } from "@/colorsPremium.js";
+import { controlTextColor } from "@/configs/colorsPremium.js";
 import { computed, useSlots } from "vue";
-import FormFieldHelp from "@/components/Premium/FormFieldHelp.vue";
+// import FormFieldHelp from "@/components/Premium/FormFieldHelp.vue";
 
 const props = defineProps({
   label: {
@@ -102,7 +102,7 @@ const labelClass = computed(() => {
     <div :class="wrapperClass">
       <slot />
     </div>
-    <FormFieldHelp
+    <PremFormFieldHelp
       class="mt-1"
       :class="{ 'lg:col-start-2 lg:col-span-4 lg:-mt-5': horizontal }"
       :help="help"
