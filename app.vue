@@ -24,7 +24,7 @@ onMounted(() => {
 })
 useHead({
   titleTemplate: (titleChunk) => {
-    const titleBase = 'Zen Nuxt '
+    const titleBase = 'Zen Nuxt'
 
     return titleChunk ? `${titleChunk} - ${titleBase}` : titleBase
   },
