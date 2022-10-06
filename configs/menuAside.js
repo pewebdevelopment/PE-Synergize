@@ -49,7 +49,7 @@ export default [
     icon: mdiViewQuilt,
   },
   {
-    to: "/styles",
+    to: "/prem/styleView",
     label: "Styles",
     icon: mdiPalette,
   },

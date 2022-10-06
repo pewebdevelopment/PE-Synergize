@@ -100,7 +100,7 @@ const expandCollapseItem = computed(() => ({
     :menu="menu"
     :class="[
       layoutStore.isAsideMobileExpanded ? 'left-0' : '-left-60 lg:left-0',
-      isPrimaryMenuCompact ? 'lg:w-22' : 'lg-w-64',
+      isPrimaryMenuCompact ? 'lg:w-[5.5rem]' : 'lg-w-64',
       { 'lg:hidden xl:flex': !layoutStore.isAsideLgActive },
     ]"
     :is-compact="isPrimaryMenuCompact"
@@ -127,7 +127,7 @@ const expandCollapseItem = computed(() => ({
   <PremAsideMenuLayer
     v-if="secondaryMenuItem"
     :menu="secondaryMenuItem.menuSecondary"
-    :class="[isPrimaryMenuCompact ? 'lg:left-22' : 'md:left-60']"
+    :class="[isPrimaryMenuCompact ? 'lg:left-[5.5rem]' : 'md:left-60']"
     class="right-0 md:right-auto animate-fade-in-right-fast lg:animate-fade-in-left-fast"
     @menu-click="menuClickSecondaryMenu"
   >
