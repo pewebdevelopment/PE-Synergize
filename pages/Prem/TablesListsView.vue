@@ -26,7 +26,7 @@ const clientBarItems = computed(() => mainStore.clients.slice(0, 3));
 
 const transactionBarItems = computed(() => mainStore.history.slice(0, 3));
 
-const productBarItems = computed(() => mainStore.products.slice(0, 3));
+const productBarItems = computed(() => (mainStore.products || []).slice(0, 3));
 </script>
 
 <template>
@@ -71,11 +71,11 @@ const productBarItems = computed(() => mainStore.products.slice(0, 3));
 
       <SectionTitleLineWithButton :icon="mdiPackageVariant" title="Products" />
 
-      <!-- <PremCardBoxProduct
+      <PremCardBoxProduct
         v-for="product in productBarItems"
         :key="product.id"
         :product="product"
-      /> -->
+      />
 
       <SectionTitleLineWithButton
         :icon="mdiMonitorCellphone"
