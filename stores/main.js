@@ -24,6 +24,40 @@ const state = () => ({
     { amount: 470.26, name: "Savings Account", date: "3 days ago", type: "payment", business: "Murazik - Graham" },
     { amount: 971.34, name: "Checking Account", date: "5 days ago", type: "invoice", business: "Fahey - Keebler" },
     { amount: 374.63, name: "Auto Loan Account", date: "7 days ago", type: "withdrawal", business: "Collier - Hintz" }
+  ],
+  products: [
+    {
+      name: "Test1",
+      date: "3 hours ago",
+      adjective: "TST_001",
+      product: "P-01",
+      material: "wood",
+      price: "20.00"
+    },
+    {
+      name: "Test2",
+      date: "2 days ago",
+      product: "P-02",
+      adjective: "TST_002",
+      material: "iron",
+      price: "40.00"
+    },
+    {
+      name: "Test3",
+      date: "3 days ago",
+      product: "P-03",
+      adjective: "TST_003",
+      material: "steel",
+      price: "20.00"
+    },
+    {
+      name: "Test4",
+      date: "4 days ago",
+      product: "P-04",
+      adjective: "TST_04",
+      material: "wood",
+      price: "20.99"
+    },
   ]
 });
 

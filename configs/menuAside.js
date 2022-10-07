@@ -23,49 +23,49 @@ export default [
     label: "Dashboard",
   },
   {
-    to: "/tables-and-lists",
+    to: "/prem/tablesListsView",
     label: "Tables & Lists",
     icon: mdiTable,
     updateMark: "warning",
   },
   {
-    to: "/forms",
+    to: "/FormsView",
     label: "Forms Base",
     icon: mdiSquareEditOutline,
   },
   {
-    to: "/forms-advanced",
+    to: "/prem/FormsView",
     label: "Forms Advanced",
     icon: mdiBallot,
   },
   {
-    to: "/ui",
+    to: "/uiView",
     label: "UI Base",
     icon: mdiTelevisionGuide,
   },
   {
-    to: "/ui-advanced",
+    to: "/prem/uiView",
     label: "UI Advanced",
     icon: mdiViewQuilt,
   },
   {
-    to: "/styles",
+    to: "/prem/styleView",
     label: "Styles",
     icon: mdiPalette,
   },
   {
-    to: "/pricing",
+    to: "/prem/pricingView",
     label: "Pricing layout",
     icon: mdiBarcode,
   },
 
   {
-    to: "/profile",
+    to: "/prem/profileView",
     label: "Profile",
     icon: mdiAccountCircle,
   },
   {
-    to: "/login",
+    to: "/prem/loginView",
     label: "Login",
     icon: mdiLock,
   },
@@ -77,7 +77,7 @@ export default [
     icon: mdiMenuOpen,
     menuSecondary: [
       {
-        to: "/profile",
+        to: "/profileView",
         label: "Sample RouterLink",
         icon: mdiCardAccountDetailsOutline,
       },
