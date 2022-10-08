@@ -26,7 +26,7 @@ const clientBarItems = computed(() => mainStore.clients.slice(0, 3));
 
 const transactionBarItems = computed(() => mainStore.history.slice(0, 3));
 
-const productBarItems = computed(() => (mainStore.products || []).slice(0, 3));
+const productBarItems = computed(() => (mainStore.products || []).slice(0, 4));
 </script>
 
 <template>
