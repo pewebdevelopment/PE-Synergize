@@ -62,7 +62,7 @@ const state = () => ({
 });
 
 const getters = {
-
+  isAuthenticated: (state)=> !!state.userEmail
 
 };
 

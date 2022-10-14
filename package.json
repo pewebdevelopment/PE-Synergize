@@ -20,9 +20,14 @@
     "tailwindcss": "^3.1.8"
   },
   "dependencies": {
+    "@a1ter/nuxt-auth-aws-cognito-scheme": "^0.0.12",
     "@headlessui/vue": "^1.4.2",
     "@mdi/js": "^7.0.96",
+    "@nuxtjs/auth-next": "^5.0.0-1637745161.ea53f98",
+    "@nuxtjs/axios": "^5.13.6",
     "@pinia/nuxt": "^0.4.2",
+    "amazon-cognito-identity-js": "^5.2.10",
+    "aws-amplify": "^4.3.37",
     "chart.js": "^3.9.1",
     "numeral": "^2.0.6",
     "pinia": "^2.0.22"

@@ -3,6 +3,8 @@
 import { mdiForwardburger, mdiBackburger, mdiMenu } from "@mdi/js";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { Auth } from 'aws-amplify'
+
 import menuAside from "@/configs/menuAside.js";
 import menuNavBar from "@/configs/menuNavBar.js";
 import { useMainStore } from "@/stores/main.js";
@@ -14,12 +16,12 @@ import NavBarItemPlain from "@/components/NavBarItemPlain.vue";
 import AsideMenu from "@/components/AsideMenu.vue";
 import FooterBar from "@/components/FooterBar.vue";
 
-useMainStore().setUser({
-  name: "John Doe",
-  email: "john@example.com",
-  avatar:
-    "https://avatars.dicebear.com/api/avataaars/example.svg?options[top][]=shortHair&options[accessoriesChance]=93",
-});
+// useMainStore().setUser({
+  // name: "John Doe",
+  // email: "john@example.com",
+  // avatar:
+    // "https://avatars.dicebear.com/api/avataaars/example.svg?options[top][]=shortHair&options[accessoriesChance]=93",
+// });
 const layoutAsidePadding = "xl:pl-60";
 const styleStore = useStyleStore();
 const router = useRouter();
@@ -29,12 +31,20 @@ router.beforeEach(() => {
   isAsideMobileExpanded.value = false;
   isAsideLgActive.value = false;
 });
-const menuClick = (event, item) => {
+const menuClick = async (event, item) => {
+  
   if (item.isToggleLightDark) {
     styleStore.setDarkMode();
   }
   if (item.isLogout) {
-    //
+    useMainStore().setUser({
+          name: '',
+          email: '',
+          avatar:
+            '',
+        })
+    await Auth.signOut()
+    navigateTo('/')
   }
 };
 

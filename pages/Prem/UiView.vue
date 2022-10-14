@@ -21,6 +21,7 @@ const snackBarMessage = ref("Hello! This is demo message...");
 const snackBarLifetime = ref(3000);
 
 const snackBarPush = () => {
+  console.log('psuhed')
   useSnackBarStore().pushMessage(
     snackBarMessage.value,
     snackBarColor.value,

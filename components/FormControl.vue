@@ -44,6 +44,7 @@ const props = defineProps({
   borderless: Boolean,
   transparent: Boolean,
   ctrlKFocus: Boolean,
+  disabled: Boolean
 });
 
 const emit = defineEmits(["update:modelValue", "setRef"]);
@@ -124,6 +125,7 @@ if (props.ctrlKFocus) {
 <template>
   <div class="relative">
     <select
+    :disabled="disabled"
       v-if="computedType === 'select'"
       :id="id"
       v-model="computedValue"
@@ -139,6 +141,7 @@ if (props.ctrlKFocus) {
       </option>
     </select>
     <textarea
+    :disabled="disabled"
       v-else-if="computedType === 'textarea'"
       :id="id"
       v-model="computedValue"
@@ -150,6 +153,7 @@ if (props.ctrlKFocus) {
     <input
       v-else
       :id="id"
+      :disabled="disabled"
       ref="inputEl"
       v-model="computedValue"
       :name="name"
@@ -163,3 +167,11 @@ if (props.ctrlKFocus) {
     <FormControlIcon v-if="icon" :icon="icon" :h="controlIconH" />
   </div>
 </template>
+
+<style>
+input:disabled{
+  opacity: 0.9;
+  background-color: #eee;
+  border-color: #d3d3d3;
+}
+</style>

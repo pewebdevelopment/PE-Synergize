@@ -1,6 +1,7 @@
 <script setup>
 import { useSnackBarStore } from "@/stores/snackBar";
-import SnackBarItem from "@/components/Premium/SnackBarItem.vue";
+import SnackBarItem from "./SnackBarItem.vue";
+
 
 const snackBarStore = useSnackBarStore();
 

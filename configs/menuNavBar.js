@@ -39,7 +39,7 @@ export default [
       {
         icon: mdiAccount,
         label: "My Profile",
-        to: "/prem/profileView",
+        to: "/prem/profile",
       },
       {
         icon: mdiCogOutline,
